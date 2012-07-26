@@ -1,6 +1,6 @@
-向 Facebook 学习：
+**向 Facebook 学习：**
 
-Done is better than perfect.
-Move fast and break things.
-Stay focused and keep shipping.
-Code wins arguments.
+1. Done is better than perfect.
+1. Move fast and break things.
+1. Stay focused and keep shipping.
+1. Code wins arguments.

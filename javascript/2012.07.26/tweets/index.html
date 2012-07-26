@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<title>Tweets</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+    <script src="jquery.min.js"></script>
+   	<script src="ember-0.9.6.min.js"></script>
+   	<script src="app.js"></script>
+</head>
+<body>
+
+	<script type="text/x-handlebars">
+		<div id="frm">
+			<b>Load Tweets for: </b>
+			{{view App.SearchTextField placeholder="Twitter username" valueBinding="App.tweetsController.username"}}
+			<button {{action "loadTweets" target="App.tweetsController"}}>Go!</button>
+		</div>
+		<div id="content">
+			<div id="recent">
+				<h3>Recent Users</h3>
+				<ol>
+				    {{#each App.recentUsersController.reverse}}
+				        <li>
+				            <a href="#" title="view again" {{action "searchAgain" target="App.recentUsersController"}}>{{this}}</a> - 
+				            <a href="#" title="remove" {{action "removeUser" target="App.recentUsersController"}}>X</a>
+				        </li>
+				    {{/each}}
+				</ol>
+			</div>
+			<div id="tweets">
+				<h3>Tweets</h3>
+				<ul>
+				    {{#each App.tweetsController}}
+				        <li>
+				            <img {{bindAttr src="avatar"}} />
+				            <span>{{date}}</span>
+				            <h3>{{screen_name}}</h3>
+				            <p>{{text}}</p>
+				        </li>
+				    {{/each}}
+				</ul>
+			</div>
+		</div>
+	</script>
+
+</body>
+</html>
