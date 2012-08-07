@@ -1,1 +1,1 @@
-http://slides.html5rocks.com/
+直接访问： http://slides.html5rocks.com/
