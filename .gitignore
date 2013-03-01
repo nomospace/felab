@@ -17,3 +17,4 @@ Thumbs.db
 *.pyo
 node_modules
 felab.iml
+*.db
